@@ -1,0 +1,39 @@
+body {
+  min-width: 320px;
+  background: linear-gradient(#0006, #0006), url("background.jpg") center / cover fixed;
+}
+
+.card {
+  width: 100%;
+  max-width: 430px;
+}
+
+.gallery-view {
+  max-width: 700px;
+}
+
+#message {
+  min-height: 22px;
+  color: #c62828;
+}
+
+.btn-primary {
+  background-color: #d1ce09;
+  border-color: #d1ce09;;
+}
+
+.btn-primary:hover {
+  background-color: #999602;
+  border-color: #999602;
+}
+
+@media (max-width: 500px) {
+  .gallery-view > div {
+    display: block !important;
+  }
+
+  .gallery-view .btn {
+    width: 100%;
+    margin-top: 12px;
+  }
+}

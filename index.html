@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Galeria de Fotos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container min-vh-100 d-flex align-items-center justify-content-center py-4">
+    <section class="view login-view card shadow p-4 p-md-5" data-view="login">
+      <h1 class="h2">Galeria de Fotos</h1>
+      <p class="text-secondary">Faça login para continuar</p>
+
+      <form id="login-form">
+        <label class="form-label mt-3" for="username">Usuário</label>
+        <input class="form-control" type="text" id="username" placeholder="Digite seu usuário">
+
+        <label class="form-label mt-3" for="password">Senha</label>
+        <input class="form-control" type="password" id="password" placeholder="Digite sua senha">
+
+        <div id="message" class="small mt-3" role="alert"></div>
+        <button class="btn btn-primary w-100 mt-2" type="submit" id="login-button">Entrar</button>
+      </form>
+    </section>
+
+    <section class="view gallery-view card shadow p-4 p-md-5 d-none" data-view="gallery">
+      <div class="d-flex justify-content-between align-items-start gap-3">
+        <div>
+          <h1 class="h2">Bem-vindo, <span id="user-name"></span>!</h1>
+          <p class="text-secondary">A galeria de fotos será adicionada na próxima etapa.</p>
+        </div>
+        <button class="btn btn-primary" type="button" id="logout-button">Sair</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
