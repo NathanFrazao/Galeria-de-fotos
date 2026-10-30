@@ -67,6 +67,14 @@ body {
   border-color: #b88f00;
 }
 
+.btn-primary:disabled,
+.btn-primary.disabled {
+  color: #fff;
+  background-color: #e6b800;
+  border-color: #e6b800;
+  opacity: 0.8;
+}
+
 @media (max-width: 500px) {
   .gallery-view > div {
     display: block !important;
