@@ -6,10 +6,50 @@ body {
 .card {
   width: 100%;
   max-width: 430px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.login-view h1 {
+  margin-bottom: 8px;
+  color: #e6b800;
+  font-family: "Great Vibes", cursive;
+  font-size: 3.2rem;
+  font-weight: 400;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-view > p {
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .gallery-view {
-  max-width: 700px;
+  max-width: 850px;
+}
+
+.photo-detail-view {
+  max-width: 850px;
+}
+
+.photo-item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.photo-item img {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+#photo-image {
+  max-height: 600px;
+  object-fit: contain;
 }
 
 #message {
@@ -18,13 +58,13 @@ body {
 }
 
 .btn-primary {
-  background-color: #d1ce09;
-  border-color: #d1ce09;;
+  background-color: #e6b800;
+  border-color: #e6b800;
 }
 
 .btn-primary:hover {
-  background-color: #999602;
-  border-color: #999602;
+  background-color: #b88f00;
+  border-color: #b88f00;
 }
 
 @media (max-width: 500px) {

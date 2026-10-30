@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Galeria de Fotos</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="container min-vh-100 d-flex align-items-center justify-content-center py-4">
     <section class="view login-view card shadow p-4 p-md-5" data-view="login">
       <h1 class="h2">Galeria de Fotos</h1>
-      <p class="text-secondary">Faça login para continuar</p>
-
+      
       <form id="login-form">
         <label class="form-label mt-3" for="username">Usuário</label>
         <input class="form-control" type="text" id="username" placeholder="Digite seu usuário">
@@ -26,13 +28,21 @@
     </section>
 
     <section class="view gallery-view card shadow p-4 p-md-5 d-none" data-view="gallery">
-      <div class="d-flex justify-content-between align-items-start gap-3">
+      <div class="d-flex justify-content-between align-items-start">
         <div>
           <h1 class="h2">Bem-vindo, <span id="user-name"></span>!</h1>
-          <p class="text-secondary">A galeria de fotos será adicionada na próxima etapa.</p>
+          <p class="text-secondary">Escolha uma foto para visualizar.</p>
         </div>
         <button class="btn btn-primary" type="button" id="logout-button">Sair</button>
       </div>
+      <p class="text-muted mb-2" id="photos-status" aria-live="polite"></p>
+      <div class="list-group" id="photo-list"></div>
+    </section>
+
+    <section class="view photo-detail-view card shadow p-4 p-md-5 d-none" data-view="photo-detail">
+      <button class="btn btn-primary mb-4 align-self-start" type="button" id="back-button">Voltar</button>
+      <h1 class="h2" id="photo-title"></h1>
+      <img class="img-fluid rounded mx-auto d-block" id="photo-image" alt="">
     </section>
   </main>
 
