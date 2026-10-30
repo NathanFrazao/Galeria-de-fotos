@@ -9,14 +9,38 @@ const photoList = document.querySelector("#photo-list");
 const photosStatus = document.querySelector("#photos-status");
 const photoTitle = document.querySelector("#photo-title");
 const photoImage = document.querySelector("#photo-image");
+const backgroundMenu = document.querySelector(".background-menu");
+const backgroundMenuButton = document.querySelector("#background-menu-button");
+const backgroundOptions = document.querySelector("#background-options");
+const backgroundChoices = document.querySelectorAll("[data-background]");
 
 const PHOTOS_API_URL = "https://jsonplaceholder.typicode.com/photos";
 const PHOTOS_LIMIT = 30;
+
+function setBackground(background) {
+  const isSecondBackground = background === "two";
+  document.body.classList.toggle("second-background", isSecondBackground);
+  document.body.classList.toggle("blue-theme", isSecondBackground);
+}
+
+backgroundMenuButton.addEventListener("click", () => {
+  const isOpen = backgroundOptions.classList.toggle("d-none") === false;
+  backgroundMenuButton.setAttribute("aria-expanded", isOpen);
+});
+
+backgroundChoices.forEach((choice) => {
+  choice.addEventListener("click", () => {
+    setBackground(choice.dataset.background);
+    backgroundOptions.classList.add("d-none");
+    backgroundMenuButton.setAttribute("aria-expanded", "false");
+  });
+});
 
 function showView(viewName) {
   views.forEach((view) => {
     view.classList.toggle("d-none", view.dataset.view !== viewName);
   });
+  backgroundMenu.classList.toggle("d-none", viewName !== "login");
 }
 
 async function loadPhotos() {

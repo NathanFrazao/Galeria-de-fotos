@@ -3,6 +3,81 @@ body {
   background: linear-gradient(#0006, #0006), url("background.jpg") center / cover fixed;
 }
 
+.background-menu {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 20;
+}
+
+.menu-button {
+  color: #333;
+  background-color: #fff;
+  border: 0;
+  box-shadow: 0 2px 8px #0005;
+}
+
+.menu-button:hover {
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.menu-icon {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.background-options {
+  min-width: 130px;
+  margin-top: 6px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 3px 12px #0005;
+}
+
+.background-options button {
+  display: block;
+  width: 100%;
+  padding: 7px 10px;
+  color: #333;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.background-options button:hover {
+  background-color: #f1f1f1;
+}
+
+body.second-background {
+  background-image: linear-gradient(#0006, #0006), url("background-vangogh.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body.blue-theme .login-view h1 {
+  color: #1769aa;
+}
+
+body.blue-theme .btn-primary {
+  background-color: #1769aa;
+  border-color: #1769aa;
+}
+
+body.blue-theme .btn-primary:hover {
+  background-color: #0d4775;
+  border-color: #0d4775;
+}
+
+body.blue-theme .btn-primary:disabled,
+body.blue-theme .btn-primary.disabled {
+  background-color: #1769aa;
+  border-color: #1769aa;
+}
+
 .card {
   width: 100%;
   max-width: 430px;

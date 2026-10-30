@@ -11,6 +11,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="background-menu">
+    <button class="btn menu-button" type="button" id="background-menu-button" aria-expanded="false" aria-controls="background-options">
+      <span class="menu-icon" aria-hidden="true">&#9776;</span>
+      Fundos
+    </button>
+    <div class="background-options d-none" id="background-options">
+      <button type="button" data-background="one">Fundo 1</button>
+      <button type="button" data-background="two">Fundo 2</button>
+    </div>
+  </div>
+
   <main class="container min-vh-100 d-flex align-items-center justify-content-center py-4">
     <section class="view login-view card shadow p-4 p-md-5" data-view="login">
       <h1 class="h2">Galeria de Fotos</h1>
